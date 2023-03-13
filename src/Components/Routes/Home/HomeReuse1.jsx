@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Home.css'
-function HomeReuse1({img,para}) {
+import {BollywoodContext} from '../../../index'
+
+function HomeReuse1() {
+ 
+  const data = useContext(BollywoodContext);
   return (
     <div className='ReuseBody'>
     <div className='secondColumn'>
-        <div><img src={img} alt="" /></div>
+        <div><img src={data.img} alt="" /></div>
         <div>
         <span>Hello guys this our second Reusable Component
-    {para}
+    
 </span></div>
     </div></div>
   )

@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Home.css'
-function HomeReuse3({img,para}) {
+import {BollywoodContext} from '../../../index'
+function HomeReuse3() {
+  const data = useContext(BollywoodContext);
   return (
     <div className='ReuseBody'>
     <div className='fourthColumn'>
-        <div><img src={img} alt="" /></div>
+        <div><img src={data.img} alt="" /></div>
         <div className='texts'>
         </div>
     </div></div>
